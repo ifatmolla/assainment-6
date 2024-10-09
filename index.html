@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AS6</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+
+
+<style>
+    .active-category{
+        border-radius: 100px !important;
+        background-color: rgba(14, 122, 129, 0.1);
+        border-color: rgb(14, 122, 129);
+    }
+</style>
+</head>
+<body>
+   <nav>
+    <div class="flex w-11/12 justify-between mx-auto mt-9">
+        <div class="flex gap-2">
+            <img src="logo.webp" alt="">
+            <h2 class="text-xl font-bold">Peddy</h2>
+        </div>
+       <div class="flex text-lg gap-4">
+        <p>Home</p>
+        <p>shop</p>
+        <p>Contact</p>
+       </div>
+       <div class="border rounded-3xl p-1">
+        <svg width="24.000000" height="24.000000" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <desc>
+                    Created with Pixso.
+            </desc>
+            <defs>
+                <clipPath id="clip2081_182">
+                    <rect id="Frame" rx="-0.500000" width="23.000000" height="23.000000" transform="translate(0.500000 0.500000)" fill="white" fill-opacity="0"/>
+                </clipPath>
+            </defs>
+            <rect id="Frame" rx="-0.500000" width="23.000000" height="23.000000" transform="translate(0.500000 0.500000)" fill="#FFFFFF" fill-opacity="0"/>
+            <g clip-path="url(#clip2081_182)">
+                <path id="Vector" d="M9.17 9.82C9.92 10.57 10.93 11 12 11C13.06 11 14.07 10.57 14.82 9.82C15.57 9.07 16 8.06 16 7C16 5.93 15.57 4.92 14.82 4.17C14.07 3.42 13.06 3 12 3C10.93 3 9.92 3.42 9.17 4.17C8.42 4.92 8 5.93 8 7C8 8.06 8.42 9.07 9.17 9.82Z" stroke="#131313" stroke-opacity="0.700000" stroke-width="1.500000" stroke-linejoin="round"/>
+                <path id="Vector" d="M6 21L6 19C6 17.93 6.42 16.92 7.17 16.17C7.92 15.42 8.93 15 10 15L14 15C15.06 15 16.07 15.42 16.82 16.17C17.57 16.92 18 17.93 18 19L18 21" stroke="#131313" stroke-opacity="0.700000" stroke-width="1.500000" stroke-linejoin="round" stroke-linecap="round"/>
+            </g>
+        </svg>
+      
+       </div>
+    </div>
+   </nav>
+
+<!-- second -->
+ <header>
+   <div class="ml-96 mt-20">
+    <p class="ml-28 text-xl font-semibold text-gray-400 mb-2">Bringing Families Together ❤️‍🔥 
+    </p>
+    <h1 class="mb-4  text-5xl font-bold">Your Path to Adoption Starts Here</h1>
+    <p class="mb-4">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. <br> The point of using Lorem Ipsum is that it has a.</p>
+    <button class="text-white text-2xl font-semibold py-2 px-3 rounded-lg bg-blue-950 ml-72" onclick="viewMore()">View More</button>
+   </div>
+
+   <div class="flex justify-center">
+    <span id="loading" class="hidden loading loading-bars loading-lg mt-5"></span>`
+   </div>
+   <div class="ml-80 mt-14">
+    <img src="pet.webp" alt="">
+   </div>
+
+   <!-- second title -->
+    <div class="ml-80  mt-9">
+        <h1 class="text-3xl font-bold ml-60">Adopt  Your  Best Friend</h1>
+        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. <br> The point of using Lorem Ipsum is that it has a.</p>
+    </div>
+    <!-- button div -->
+     <div id="categories" class=" mt-14 flex justify-around ">
+        <!-- <button class=" py-5 px-24 mb-16 rounded-xl border ">Dogs</button>
+     <button class=" py-5 px-24 mb-16 rounded-full border">Cats</button>
+     <button class=" py-5 px-24 mb-16 rounded-xl border">Rabbits</button>
+     <button class=" py-5 px-24 mb-16 rounded-xl border">Birds</button> -->
+     </div>
+
+
+     <button id="categories">
+   
+     </button>
+    <div class="flex justify-between mx-auto w-11/12 mb-7">
+       <h2 class="text-xl font-bold">Best Deal For you</h2>
+       <button class="text-white py-2 px-10 rounded-xl bg-emerald-800" onclick="sortByPrice()">Sort by Price</button>
+    </div>
+
+   
+
+   
+
+    <dialog id="DetailsModal" class="modal ">
+        <div class="modal-box h-[500px]" id="detailsContent">
+
+        </div>
+      </dialog>
+   <!-- Open the modal using ID.showModal() method -->
+
+<dialog id="my_modal_1" class="modal w-96 m-auto ">
+  <div class="modal-box ">
+    <div class="border w-full h-56 flex flex-col justify-center items-center">
+        <img class=" mb-4" src="https://img.icons8.com/?size=64&id=m16ThFFL5WH6&format=png" alt="">
+        <h1 id="second" class="text-xl font-bold">3</h1> 
+        <p>Lorem ipsum dolor sit amet.</p>
+     </div>
+    
+  </div>
+</dialog>
+
+
+   
+
+
+    <div class="flex justify-between">
+        <div id="petContainer" class="flex grow justify-center flex-wrap p-7 gap-5">
+      
+        </div>
+        <div id="likeContainer" class="w-72 min-h-96 h-fit flex flex-wrap shrink-0 gap-4 border   ">
+         
+                
+            
+            
+           
+                
+            
+        </div>
+    </div>
+
+    
+ </header>
+ <footer>
+   <div class="bg-black py-10">
+    <div class="flex w-11/12 mx-auto justify-between text-gray-400 bg-black">
+        <div>
+           
+            <div class="flex gap-2">
+                <p class="text-lg font-semibold text-white">Peddy</p>
+                <img class="w-7" src="logo.webp" alt="">
+            </div>
+            <p>Location: av. Washington 165, NY CA </p>
+            <p>54003</p>
+            <p>Phone: +31 85 964 47 25
+            </p>
+            <p>Email: info@yourdomain.com
+            </p>
+            <p>Openings hours: 9.00 AM - 5.00 PM</p>
+            <div class="flex gap-2">
+                <img class="w-10 h-10" src="https://img.icons8.com/?size=48&id=uLWV5A9vXIPu&format=png" alt="">
+                <img class="w-10 h-10 text-white" src="https://img.icons8.com/?size=48&id=13963&format=png" alt="">
+                <img class="w-10 h-10" src="https://img.icons8.com/?size=48&id=9a46bTk3awwI&format=png" alt="">
+                <img class="w-10 h-10" src="https://img.icons8.com/?size=48&id=32323&format=png" alt="">
+
+            </div>
+        </div>
+        <div>
+            <h6 class="text-white text-lg font-bold ">Useful Links</h6>
+            <p>Home
+            </p>
+            <p>About Us
+            </p>
+            <p>Animals
+            </p>
+            <p>Foundation</p>
+            <p>Contact</p>
+        </div>
+        <div class="">
+            <h3 class="mb-6 text-sm  font-bold text-white">Drop a Massage</h3> 
+           <input class="bg-slate-800 py-2 px-3 mb-5" type="text" placeholder="enter your email"><br>
+            <button class="text-white py-2 px-20 rounded-xl bg-emerald-800">Subscribe</button>
+            
+         </div>
+    </div>
+   
+   </div>
+ </footer>
+ <script src="index2.js"></script>
+</body>
+</html>
